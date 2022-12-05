@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+var topic = ""
 struct ContentView: View {
     @State private var isLoading = false
 

@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-
 struct Title: View {
     var body: some View {
         VStack (alignment: .leading) {
-            Text("Nature")
+            Text(topic)
                 .font(.title)
                 .bold()
         }

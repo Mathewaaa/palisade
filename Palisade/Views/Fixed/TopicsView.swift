@@ -21,85 +21,7 @@ struct TopicsView: View {
                     HStack {
                         Spacer()
                         Button {
-                            print("Hello")
-                        } label: {
-                            Text("Animals")
-                                .foregroundColor(Color.white)
-                                .padding()
-                                .frame(width: 175.0, height: 150.0)
-                                .background(Color.gray)
-                                .cornerRadius(10)
-                        }
-                        Spacer()
-                        Button {
-                            print("Hi")
-                        } label: {
-                            Text("Movies/TV Shows")
-                                .foregroundColor(Color.white)
-                                .padding()
-                                .frame(width: 175.0, height: 150.0)
-                                .background(Color.gray)
-                                .cornerRadius(10)
-                        }
-                        Spacer()
-                    }
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Button {
-                            print("Hello")
-                        } label: {
-                            Text("Dating")
-                                .foregroundColor(Color.white)
-                                .padding()
-                                .frame(width: 175.0, height: 150.0)
-                                .background(Color.gray)
-                                .cornerRadius(10)
-                        }
-                        Spacer()
-                        Button {
-                            print("Hi")
-                        } label: {
-                            Text("Beauty")
-                                .foregroundColor(Color.white)
-                                .padding()
-                                .frame(width: 175.0, height: 150.0)
-                                .background(Color.gray)
-                                .cornerRadius(10)
-                        }
-                        Spacer()
-                    }
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Button {
-                            print("Hello")
-                        } label: {
-                            Text("Food")
-                                .foregroundColor(Color.white)
-                                .padding()
-                                .frame(width: 175.0, height: 150.0)
-                                .background(Color.gray)
-                                .cornerRadius(10)
-                        }
-                        Spacer()
-                        Button {
-                            print("Hi")
-                        } label: {
-                            Text("Fashion")
-                                .foregroundColor(Color.white)
-                                .padding()
-                                .frame(width: 175.0, height: 150.0)
-                                .background(Color.gray)
-                                .cornerRadius(10)
-                        }
-                        Spacer()
-                    }
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Button {
-                            print("Hello")
+                            topic = "Sports"
                         } label: {
                             Text("Sports")
                                 .foregroundColor(Color.white)
@@ -110,9 +32,87 @@ struct TopicsView: View {
                         }
                         Spacer()
                         Button {
-                            print("Hi")
+                            topic = "Nature"
                         } label: {
-                            Text("Education")
+                            Text("Nature")
+                                .foregroundColor(Color.white)
+                                .padding()
+                                .frame(width: 175.0, height: 150.0)
+                                .background(Color.gray)
+                                .cornerRadius(10)
+                        }
+                        Spacer()
+                    }
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button {
+                            topic = "Art"
+                        } label: {
+                            Text("Art")
+                                .foregroundColor(Color.white)
+                                .padding()
+                                .frame(width: 175.0, height: 150.0)
+                                .background(Color.gray)
+                                .cornerRadius(10)
+                        }
+                        Spacer()
+                        Button {
+                            topic = "Dating"
+                        } label: {
+                            Text("Dating")
+                                .foregroundColor(Color.white)
+                                .padding()
+                                .frame(width: 175.0, height: 150.0)
+                                .background(Color.gray)
+                                .cornerRadius(10)
+                        }
+                        Spacer()
+                    }
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button {
+                            topic = "Gaming"
+                        } label: {
+                            Text("Gaming")
+                                .foregroundColor(Color.white)
+                                .padding()
+                                .frame(width: 175.0, height: 150.0)
+                                .background(Color.gray)
+                                .cornerRadius(10)
+                        }
+                        Spacer()
+                        Button {
+                            print("Food")
+                        } label: {
+                            Text("Food")
+                                .foregroundColor(Color.white)
+                                .padding()
+                                .frame(width: 175.0, height: 150.0)
+                                .background(Color.gray)
+                                .cornerRadius(10)
+                        }
+                        Spacer()
+                    }
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button {
+                            print("Feelings")
+                        } label: {
+                            Text("Feelings")
+                                .foregroundColor(Color.white)
+                                .padding()
+                                .frame(width: 175.0, height: 150.0)
+                                .background(Color.gray)
+                                .cornerRadius(10)
+                        }
+                        Spacer()
+                        Button {
+                            print("Work")
+                        } label: {
+                            Text("Work")
                                 .foregroundColor(Color.white)
                                 .padding()
                                 .frame(width: 175.0, height: 150.0)

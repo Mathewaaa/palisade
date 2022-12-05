@@ -13,7 +13,7 @@ struct PostField: View {
         HStack {
             CustomPostField(placeholder: Text("Enter comments here"), text: $post)
             Button {
-                print("Posted")
+                DatabaseManager.createPost(category: Category(rawValue: topic) ?? .nature, message: post)
                 post = ""
             } label: {
                 Image(systemName: "paperplane.fill")
