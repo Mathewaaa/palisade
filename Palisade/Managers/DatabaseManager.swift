@@ -10,8 +10,7 @@ import FirebaseDatabase
 
 class DatabaseManager: ObservableObject {
     private static let database = Database.database().reference()
-    private static let posts: [Category: Array<Dictionary<String, Dictionary<String, String>>>] = [:]
-    
+    private static var posts: [String: AnyObject] = [:]
     
     public static func createPost(category: Category, message: String) {
         let object: [String: String] = [
@@ -27,7 +26,11 @@ class DatabaseManager: ObservableObject {
         database.child("palisade").child(category.rawValue).child(messageId).child("replies").child(String(Int64((NSDate().timeIntervalSince1970 * 1000.0).rounded()))).setValue(message)
     }
     
-    public static func getCategory(category: Category) {
-        
+    public static func getCategory(category: Category, completion: @escaping ([String: AnyObject]?) -> Void) {
+        database.child("palisade").child(category.rawValue).observe(.value, with: { (snapshot) in
+            if let data = snapshot.value as? [String: AnyObject] {
+                completion(data)
+            }
+        })
     }
 }

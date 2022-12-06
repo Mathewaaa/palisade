@@ -19,7 +19,12 @@ struct PalisadeApp: App {
             PalisadeApp.settingsManager.setUsername()
         }
 //        DatabaseManager.createPost(category: Category.sports, message: "hi")
+        DatabaseManager.getCategory(category: Category.sports) {
+            (data) in
+            print(data?["1670204597754"])
+        }
     }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

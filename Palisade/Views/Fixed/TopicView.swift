@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct TopicsView: View {
+struct TopicView: View {
+    @Binding var topic: Category
     var body: some View {
         VStack {
-            Spacer()
             Text("Topics")
                 .font(.largeTitle)
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
@@ -21,115 +21,113 @@ struct TopicsView: View {
                     HStack {
                         Spacer()
                         Button {
-                            topic = "Sports"
+                            topic = Category.sports
                         } label: {
                             Text("Sports")
                                 .foregroundColor(Color.white)
                                 .padding()
-                                .frame(width: 175.0, height: 150.0)
+                                .frame(width: 150.0, height: 100.0)
                                 .background(Color.gray)
                                 .cornerRadius(10)
                         }
                         Spacer()
                         Button {
-                            topic = "Nature"
+                            topic = Category.nature
                         } label: {
                             Text("Nature")
                                 .foregroundColor(Color.white)
                                 .padding()
-                                .frame(width: 175.0, height: 150.0)
+                                .frame(width: 150.0, height: 100.0)
                                 .background(Color.gray)
                                 .cornerRadius(10)
                         }
                         Spacer()
                     }
                     Spacer()
+                        .frame(height: 40.0)
                     HStack {
                         Spacer()
                         Button {
-                            topic = "Art"
+                            topic = Category.art
                         } label: {
                             Text("Art")
                                 .foregroundColor(Color.white)
                                 .padding()
-                                .frame(width: 175.0, height: 150.0)
+                                .frame(width: 150.0, height: 100.0)
                                 .background(Color.gray)
                                 .cornerRadius(10)
                         }
                         Spacer()
                         Button {
-                            topic = "Dating"
+                            topic = Category.dating
                         } label: {
                             Text("Dating")
                                 .foregroundColor(Color.white)
                                 .padding()
-                                .frame(width: 175.0, height: 150.0)
+                                .frame(width: 150.0, height: 100.0)
                                 .background(Color.gray)
                                 .cornerRadius(10)
                         }
                         Spacer()
                     }
                     Spacer()
+                        .frame(height: 40.0)
                     HStack {
                         Spacer()
                         Button {
-                            topic = "Gaming"
+                            topic = Category.gaming
                         } label: {
                             Text("Gaming")
                                 .foregroundColor(Color.white)
                                 .padding()
-                                .frame(width: 175.0, height: 150.0)
+                                .frame(width: 150.0, height: 100.0)
                                 .background(Color.gray)
                                 .cornerRadius(10)
                         }
                         Spacer()
                         Button {
-                            print("Food")
+                            topic = Category.food
                         } label: {
                             Text("Food")
                                 .foregroundColor(Color.white)
                                 .padding()
-                                .frame(width: 175.0, height: 150.0)
+                                .frame(width: 150.0, height: 100.0)
                                 .background(Color.gray)
                                 .cornerRadius(10)
                         }
                         Spacer()
                     }
                     Spacer()
+                        .frame(height: 40.0)
                     HStack {
                         Spacer()
                         Button {
-                            print("Feelings")
+                            topic = Category.feelings
                         } label: {
                             Text("Feelings")
                                 .foregroundColor(Color.white)
                                 .padding()
-                                .frame(width: 175.0, height: 150.0)
+                                .frame(width: 150.0, height: 100.0)
                                 .background(Color.gray)
                                 .cornerRadius(10)
                         }
                         Spacer()
                         Button {
-                            print("Work")
+                            topic = Category.work
                         } label: {
                             Text("Work")
                                 .foregroundColor(Color.white)
                                 .padding()
-                                .frame(width: 175.0, height: 150.0)
+                                .frame(width: 150.0, height: 100.0)
                                 .background(Color.gray)
                                 .cornerRadius(10)
                         }
                         Spacer()
                     }
+                    Spacer()
                 }
             }
         }
-    }
-}
-
-struct TopicsView_Previews: PreviewProvider {
-    static var previews: some View {
-        TopicsView()
     }
 }
 

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-var topic = ""
+
 struct ContentView: View {
     @State private var isLoading = false
 
@@ -24,7 +24,7 @@ struct ContentView: View {
     
     func startLoading() {
         isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { // 3 seconds of loading
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { // 3 seconds of loading
             isLoading = false
         }
     }

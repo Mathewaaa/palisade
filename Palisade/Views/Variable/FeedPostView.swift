@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FeedPostView: View {
     @Binding var topic: Category
+    @StateObject private var viewModel = PostViewModel()
+    
     var body: some View {
         VStack {
             HStack {
@@ -22,8 +24,17 @@ struct FeedPostView: View {
                 Spacer()
                 Title(title: topic)
             }
+            ScrollView {
+                List(viewModel.posts[Category.sports] ?? []) { post in
+                    PostBubble(post: post)
+                    Spacer()
+                }
+                
+            }
             
-            Spacer()
+        }
+        .onAppear {
+            viewModel.listentoRealtimeDatabase()
         }
     }
 }
