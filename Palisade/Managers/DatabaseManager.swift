@@ -30,4 +30,10 @@ class DatabaseManager: ObservableObject {
     public static func getCategory(category: Category) {
         
     }
+    
+    func sendPost(text: String) {
+        do {
+            let newPost = Post(id: "\(UUID())", text: "message", timestamp: Date())
+        }
+    }
 }

@@ -26,12 +26,21 @@ struct PostBubble: View {
                 Text("\(post.timestamp.formatted(.dateTime.hour().minute()))")
                     .font(.caption2)
                     .foregroundColor(Color.gray)
-                    .padding(.trailing,20)
+                    .padding([.trailing],20)
             }
+            Button {
+                print("open reply field menu")
+            } label: {
+                Text("Reply")
+                    .padding([.leading, .bottom, .trailing])
+                    
+            }
+            
         }
         .frame(maxWidth: .infinity, alignment: .trailing)
         .padding(.trailing)
         .padding(.horizontal, 10)
+        
     }
 }
 

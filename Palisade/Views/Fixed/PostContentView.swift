@@ -12,7 +12,7 @@ struct PostContentView: View {
 
     var body: some View {
         VStack {            
-            Text("What troubles you today?")
+            Text("Comments?")
                 .font(.system(size: 30))
                 .fontWeight(.ultraLight)
                 .multilineTextAlignment(.center)

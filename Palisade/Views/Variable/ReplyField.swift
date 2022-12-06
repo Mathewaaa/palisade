@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct PostField: View {
-    @EnvironmentObject var DatabaseManager: DatabaseManager
-    @State private var post = ""
+struct ReplyField: View {
+    @State private var reply = ""
     var body: some View {
         HStack {
-            CustomPostField(placeholder: Text("Enter comments here"), text: $post)
+            CustomPostField(placeholder: Text("Type reply here"), text: $reply)
             Button {
-                DatabaseManager.sendPost(text: post)
-                post = ""
+                print("hi")
+                reply = ""
             } label: {
                 Image(systemName: "paperplane.fill")
                     .foregroundColor(Color.white)
@@ -33,14 +32,13 @@ struct PostField: View {
     }
 }
 
-struct PostField_Previews: PreviewProvider {
+struct ReplyField_Previews: PreviewProvider {
     static var previews: some View {
-        PostField()
-            .environmentObject(DatabaseManager())
+        ReplyField()
     }
 }
 
-struct CustomPostField: View {
+struct CustomReplyField: View {
     var placeholder: Text
     @Binding var text: String
     var editingChanged: (Bool) -> () = {_ in}

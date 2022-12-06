@@ -12,9 +12,9 @@ struct FeedContentView: View {
     var body: some View {
         ZStack {
             if topic == Category.none {
-                TopicsView(topic: $topic)
+                TopicsView()
             } else {
-                FeedPostView(topic: $topic)
+                NavigationBarView()
             }
         }
 
