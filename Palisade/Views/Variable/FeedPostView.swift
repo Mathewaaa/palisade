@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct FeedPostView: View {
+    @Binding var topic: Category
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct FeedPostView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedPostView()
+        VStack {
+            HStack {
+                Spacer()
+                    .frame(width: 25.0)
+                Button {
+                    topic = Category.none
+                } label: {
+                    Image(systemName: "arrowshape.backward.fill")
+                }
+                Spacer()
+                Title(title: topic)
+            }
+            
+            Spacer()
+        }
     }
 }

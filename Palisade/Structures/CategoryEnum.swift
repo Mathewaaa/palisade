@@ -16,6 +16,7 @@ enum Category: String {
     case food = "food"
     case feelings = "feelings"
     case work = "work"
+    case none
 }
 
 

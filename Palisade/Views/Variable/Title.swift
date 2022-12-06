@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct Title: View {
+    var title: Category
     var body: some View {
-        VStack (alignment: .leading) {
-            Text("Nature")
+        VStack(alignment: .leading) {
+            Text(title.rawValue.capitalized)
                 .font(.title)
                 .bold()
         }
@@ -19,12 +20,11 @@ struct Title: View {
         .background(Color.gray)
         .cornerRadius(10)
         .padding()
-        
     }
 }
 
 struct Title_Previews: PreviewProvider {
     static var previews: some View {
-        Title()
+        Title(title: Category.art)
     }
 }

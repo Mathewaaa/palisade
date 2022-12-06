@@ -8,22 +8,14 @@
 import SwiftUI
 
 struct FeedContentView: View {
+    @State var topic: Category = Category.none
     var body: some View {
-        VStack {
-            VStack {
-                Title()
-                    .background(Color.gray)
-                    .cornerRadius(10)
-                    .padding()
-                ScrollView {
-//                    ForEach(postManager.posts, id: \.id) {
-//                        post in PostBubble (post: post)
-//                    }
-                }
-                .padding(.top,10)
-                .background(.white)
+        ZStack {
+            if topic == Category.none {
+                TopicsView(topic: $topic)
+            } else {
+                FeedPostView(topic: $topic)
             }
-            PostField()
         }
 
     }

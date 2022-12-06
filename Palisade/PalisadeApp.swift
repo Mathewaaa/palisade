@@ -18,7 +18,7 @@ struct PalisadeApp: App {
         if PalisadeApp.settingsManager.getUsername() == "Anonymous" {
             PalisadeApp.settingsManager.setUsername()
         }
-        DatabaseManager.createPost(category: Category.sports, message: "hi")
+//        DatabaseManager.createPost(category: Category.sports, message: "hi")
     }
     var body: some Scene {
         WindowGroup {

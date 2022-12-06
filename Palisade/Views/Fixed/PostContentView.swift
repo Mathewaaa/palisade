@@ -11,10 +11,7 @@ struct PostContentView: View {
     @State var input: String = ""
 
     var body: some View {
-        VStack {
-            Spacer()
-                .frame(height: 150.0)
-            
+        VStack {            
             Text("What troubles you today?")
                 .font(.system(size: 30))
                 .fontWeight(.ultraLight)
@@ -22,34 +19,29 @@ struct PostContentView: View {
                 .bold()
             
             Spacer()
-                .frame(height: 80.0)
+                .frame(height: 150.0)
             
                             
             TextField(
                     "I...",
                     text: $input
             )
-            .frame(width: 150.0, height: 25.0)
-            .multilineTextAlignment(.center)
-                .textInputAutocapitalization(.never)
-                .border(.ultraThinMaterial)
-                .cornerRadius(2.5)
+            .frame(width: 150.0, height: 50.0)
+            
             
             Spacer()
-                .frame(width: 0.0, height: 80.0)
-        
-            Button("Next!") {
-//                DatabaseManager.createPost(category: <#T##Category#>, message: input) // post message to database 
+                .frame(height: 150.0)
+            
+            Menu("Submit") {
+                Button("Sports", action: { DatabaseManager.createPost(category: Category.sports, message: input) })
+                Button("Nature", action: { DatabaseManager.createPost(category: Category.nature, message: input) })
+                Button("Art", action: { DatabaseManager.createPost(category: Category.art, message: input) })
+                Button("Dating", action: { DatabaseManager.createPost(category: Category.dating, message: input) })
+                Button("Gaming", action: { DatabaseManager.createPost(category: Category.gaming, message: input) })
+                Button("Food", action: { DatabaseManager.createPost(category: Category.food, message: input) })
+                Button("Feelings", action: { DatabaseManager.createPost(category: Category.feelings, message: input) })
+                Button("Work", action: { DatabaseManager.createPost(category: Category.work, message: input) })
             }
-            .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
-            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-
-
-            
-        
-            Spacer()
-                
-                
         }
     }
 }
